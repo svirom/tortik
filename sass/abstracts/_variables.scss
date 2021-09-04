@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// font family
+// font-family: 'IBM Plex Serif', serif;
+// font-family: 'Inter', sans-serif;
+$font-main: 'Inter', sans-serif;
+$font-title: 'IBM Plex Serif', serif;
+
+// colors
+$color-black: #000000;
+$color-white: #ffffff;
+$color-pink: #FFA6BB;
+$color-grey: #DCE2F0;
+$color-dark-grey: #8792AB;
+
+
+// media query breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
