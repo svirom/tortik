@@ -1,3 +1,126 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site.
 // -----------------------------------------------------------------------------
+
+.main-header {
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid $color-grey-grey;
+  z-index: 1000;
+}
+
+.header-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.main-logo {
+  margin-right: 2.5rem;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+
+  li {
+    a {
+      padding: 0.5rem;
+    }
+  }
+
+  li:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+.secondary-nav {
+  display: flex;
+}
+
+.social-menu {
+  display: flex;
+  align-items: center;
+  margin-right: 1.6875rem;
+}
+
+.social-phone {
+  margin-right: 1.25rem;
+
+  a {
+    font-weight: 500;
+  }
+}
+
+.social-viber, .social-telegram {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 3px;
+  }
+}
+
+.social-viber {
+  margin-right: 0.4375rem;
+
+  a {
+    background-color: #834995;
+
+    &:hover {
+      background-color: darken(#834995, 5%);
+    }
+  }
+}
+
+.social-telegram {
+  a {
+    background-color: #63C4E9;
+
+    &:hover {
+      background-color: darken(#63C4E9, 5%);
+    }
+  }
+}
+
+.select-menu {
+  &-item {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+
+    svg {
+      vertical-align: initial;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    width: auto;
+    min-width: auto;
+  }
+
+  .dropdown-item {
+    padding: 0;
+  }
+}
+
