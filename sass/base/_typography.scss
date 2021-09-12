@@ -55,8 +55,12 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $color-black;
-    text-decoration: underline;
+    color: $color-pink;
+    text-decoration: none;
+  }
+
+  &[aria-expanded="true"] {
+    color: $color-pink;
   }
 }
 
