@@ -7,7 +7,6 @@ $(document).ready(function() {
     if (width >= 768) {
       $('.dropdown-hover').hover(
         function() {
-          const $this = $(this);
           $(this).addClass('show');
           $(this).find('.item-toggle').attr('aria-expanded', 'true');
           $(this).find('.dropdown-menu').addClass('show');
@@ -30,16 +29,12 @@ $(document).ready(function() {
   function catalogOpen(e) {
     e.preventDefault();
 
-    var catalogHeight = $('.navbar-collapse').find('.mobile-catalog').height();
-
     $(this).closest('.navbar-collapse').addClass('overflow-y-hidden')
       .find('.mobile-catalog').addClass('active');
   }
 
   function catalogClose(e) {
     e.preventDefault();
-
-    var mobileMenuHeight = $('.mobile-menu-wrapper').height();
 
     $(this).closest('.navbar-collapse').removeClass('overflow-y-hidden')
       .find('.mobile-catalog').removeClass('active');

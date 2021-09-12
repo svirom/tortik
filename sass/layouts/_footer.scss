@@ -1,3 +1,100 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.main-footer {
+  padding: 2rem 0 5.375rem;
+  color: $color-grey-grey;
+  background-color: $color-black;
+
+  a {
+    color: $color-grey-grey;
+
+    &:hover {
+      color: $color-pink;
+    }
+  }
+}
+
+.footer-widget {
+  .widget-title {
+    font-weight: 700;
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .footer-list {
+    & > li:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &.footer-menu {
+    .widget-title {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-list {
+      & > li:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .footer-item-social {
+    display: flex;
+    align-items: center;
+
+    & > a {
+      flex-shrink: 0;
+    }
+
+    .social-menu {
+      flex-shrink: 0;
+      margin-right: 0;
+    }
+
+    .social-item {
+      margin-right: 0;
+      margin-left: 0.4375rem;
+
+      a {
+        width: 1.25rem;
+        height: 1.25rem;
+        padding: 0.25rem;
+      }
+    }
+  }
+
+  .footer-social-menu {
+    margin-top: 0.9375rem;
+  }
+}
+
+@include until($lg) {
+  .footer-widget {
+    &.footer-menu {
+      .widget-title {
+        margin-bottom: 1.3125rem;
+      }
+  
+      .footer-list {
+        a {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
+
+@include until($md) {
+  .main-footer {
+    padding-bottom: 0.625rem;
+  }
+
+  .footer-widget {
+    margin-bottom: 1.875rem;
+  }
+}
