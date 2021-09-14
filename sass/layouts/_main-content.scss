@@ -12,3 +12,9 @@
   flex: 1 0 auto;
   padding-bottom: 4rem;
 }
+
+@include until($sm) {
+  .main-content {
+    padding-bottom: 2rem;
+  }
+}
