@@ -134,30 +134,30 @@
 
 .social-viber {
   a {
-    background-color: #834995;
+    background-color: $color-viber;
 
     &:hover {
-      background-color: darken(#834995, 5%);
+      background-color: darken($color-viber, 5%);
     }
   }
 }
 
 .social-telegram {
   a {
-    background-color: #63C4E9;
+    background-color: $color-telegram;
 
     &:hover {
-      background-color: darken(#63C4E9, 5%);
+      background-color: darken($color-telegram, 5%);
     }
   }
 }
 
 .social-facebook {
   a {
-    background-color: #3B60A5;
+    background-color: $color-facebook;
 
     &:hover {
-      background-color: darken(#3B60A5, 5%);
+      background-color: darken($color-facebook, 5%);
     }
   }
 }
@@ -387,7 +387,7 @@
   padding-right: 15px;
   padding-bottom: 7rem;
   transform: translateX(100%);
-  background-color: #fff;
+  background-color: $color-white;
   z-index: 2;
   transition: all 0.3s ease;
   overflow-y: scroll;

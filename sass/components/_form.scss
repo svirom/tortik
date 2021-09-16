@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the form component.
+// -----------------------------------------------------------------------------
+
+.form-control {
+  &.form-input {
+    height: 3rem;
+    padding: 0.5rem 1.5rem;
+    color: $color-black;
+    border: 2px solid $color-grey;
+    border-radius: 0.25rem;
+    background-color: $color-white;
+    text-overflow: ellipsis;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($color-grey, 0.25);
+    }
+  }
+}
+
+.form-input::-webkit-input-placeholder {
+  color: $color-dark-grey;
+}
+
+.form-input:-ms-input-placeholder {
+  color: $color-dark-grey;
+}
+
+.form-input::-ms-input-placeholder {
+  color: $color-dark-grey;
+}
+
+.form-input::placeholder {
+  color: $color-dark-grey;
+}
+
+.btn {
+  &.btn-submit {
+    height: 3rem;
+    padding: 0.5rem 1.5rem;
+    color: $color-black;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    background-color: $color-pink;
+
+    &:hover {
+      background-color: #FF7495;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($color-pink, 0.25);
+    }
+  }
+}
+
