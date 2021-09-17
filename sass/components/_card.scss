@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the cards component.
+// -----------------------------------------------------------------------------
+
+.catalog-card {
+  display: block;
+  margin-bottom: 1.875rem;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  h3 {
+    margin-top: 1.4375rem;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the landing (city, tastes, cupcake) of the site.
+// -----------------------------------------------------------------------------
+
+.landing-header {
+  padding-top: 3.75rem;
+  padding-bottom: 6.875rem;
+  text-align: center;
+  background-color: #E6EAF5;
+  background-image: url('../img/landing/landing-header-1.jpg'), url('../img/landing/landing-header-2.jpg');
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat, no-repeat;
+
+  .request-card {
+    margin-top: 1.5rem;
+  }
+
+  .request-divider span {
+    &::before, &::after {
+      border-color: $color-pink;
+    }
+  }
+}
+
+.landing-title {
+  span {
+    display: block;
+  }
+
+  .h1 {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.landing-catalog {
+  padding-top: 4rem;
+  padding-bottom: 2.125rem;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@include until($lg) {
+  .landing-header {
+    background-color: $color-grey-grey;
+    background-image: none;
+  }
+}
+
+@include until($md) {
+  .landing-header {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+
+    .request-card {
+      margin-top: 1.25rem;
+    }
+  }
+}
