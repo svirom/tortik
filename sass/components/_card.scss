@@ -2,6 +2,7 @@
 // This file contains all styles related to the cards component.
 // -----------------------------------------------------------------------------
 
+// catalog card
 .catalog-card {
   display: block;
   margin-bottom: 1.875rem;
@@ -15,5 +16,183 @@
   h3 {
     margin-top: 1.4375rem;
     margin-bottom: 0;
+  }
+}
+
+@include until($md) {
+  .catalog-card {
+    margin-bottom: 0.9375rem;
+
+    h3 {
+      margin-top: 0.625rem;
+    }
+  }
+}
+
+@include until($sm) {
+  .cards-wrapper {
+    &.row {
+      margin-right: -7px;
+      margin-left: -7px;
+
+      & > [class^="col-"] {
+        padding-left: 7px;
+        padding-right: 7px;
+      }
+    }
+  }
+}
+
+// taste card
+.taste-card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.taste-img {
+  margin-bottom: 1rem;
+}
+
+.taste-content {
+  .taste-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include until($sm) {
+  .taste-card {
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    text-align: left;
+
+    &:not(.taste-card-last) {
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid $color-grey;
+    }
+  }
+
+  .taste-img {
+    width: 6.25rem;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+// price card
+.price-card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: $color-mint;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+
+  .price-card-subtitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .price-card-info {
+    margin-bottom: 0;
+
+    span {
+      display: inline-block;
+      padding: 0.875rem 0.75rem 0.8125rem 0.75rem;
+      font-size: 1.125rem;
+      border-radius: 0.5rem;
+      background-color: $color-tiffani-blue;
+    }
+  }
+}
+
+// landing-delivery
+.landing-delivery {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: $color-light-pink;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+}
+
+.delivery-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0.625rem 1.75rem;
+  border: 2px solid $color-pink;
+  border-radius: 0.25rem;
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+
+    &:last-child {
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+  }
+}
+
+@include until($md) {
+  .price-card {
+    padding: 1rem;
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .price-card-subtitle {
+      font-size: 1.125rem;
+    }
+  }
+
+  .landing-delivery {
+    padding: 1rem;
+  }
+}
+
+@include until($sm) {
+  .landing-delivery {
+    h3 {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .delivery-option {
+    height: auto;
+    padding: 1.5rem 1rem;
+
+    &.delivery-option-last {
+      margin-top: 1.25rem;
+    }
   }
 }

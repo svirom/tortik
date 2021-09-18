@@ -42,10 +42,96 @@
   }
 }
 
+.landing-tastes {
+  padding-top: 1.4375rem;
+  padding-bottom: 1.9375rem;
+  text-align: center;
+  background-color: $color-grey-grey;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+    max-width: 20.625rem;
+    padding: 0.5625rem 1.5rem 0.4375rem;
+  }
+}
+
+.landing-order {
+  padding-top: 4rem;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+
+.landing-card {
+  padding-bottom: 4rem;
+  border-bottom: 2px solid $color-grey-grey;
+
+  .price-card {
+    margin-bottom: 1.875rem;
+  }
+
+  .request-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@include until($xl) {
+  .landing-card {
+    .request-contacts {
+      flex-direction: column;
+    }
+
+    .request-link {
+      &.request-viber {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+  
+      &.request-telegram {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 @include until($lg) {
   .landing-header {
     background-color: $color-grey-grey;
     background-image: none;
+  }
+
+  .landing-card {
+    .request-email {
+      form {
+        flex-direction: column;
+  
+        .form-group {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+  
+        .btn-submit {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .delivery-option {
+      height: auto;
+
+      &.delivery-option-last {
+        margin-top: 1.25rem;
+      }
+    }
   }
 }
 
@@ -56,6 +142,60 @@
 
     .request-card {
       margin-top: 1.25rem;
+    }
+  }
+
+  .landing-catalog {
+    padding-top: 2rem;
+    padding-bottom: 1.0625rem;
+
+    h2 {
+      margin-bottom: 0.9375rem;
+    }
+  }
+
+  .landing-tastes {
+    padding-top: 1.875rem;
+    padding-bottom: 0.9375rem;
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .landing-order {
+    padding-top: 2rem;
+  }
+
+  .landing-card {
+    padding-bottom: 2rem;
+
+    .price-card {
+      margin-bottom: 1.5rem;
+    }
+
+    .landing-delivery {
+      margin-bottom: 1.5rem;
+    }
+
+    .delivery-option {
+      height: 100%;
+
+      &.delivery-option-last {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@include until($sm) {
+  .landing-card {
+    .delivery-option {
+      height: auto;
+      
+      &.delivery-option-last {
+        margin-top: 1.25rem;
+      }
     }
   }
 }
