@@ -49,11 +49,11 @@
   flex-direction: column;
   padding-bottom: 2rem;
   text-align: center;
-}
 
-img {
-  max-width: 100%;
-  border-radius: 0.5rem;
+  img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
 }
 
 .taste-img {
@@ -194,5 +194,127 @@ img {
     &.delivery-option-last {
       margin-top: 1.25rem;
     }
+  }
+}
+
+// taste page card
+.taste-page-card {
+  padding-bottom: 1.5rem;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+}
+
+.taste-page-img {
+  margin-bottom: 1rem;
+}
+
+.taste-page-content {
+  .taste-page-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }  
+  }
+}
+
+@include until($sm) {
+  .taste-page-card {
+    padding-bottom: 1.875rem;
+
+    &.taste-page-card-last {
+      padding-bottom: 0;  
+    }
+  }
+
+  .taste-page-img {
+    
+  }
+}
+
+// size card
+.size-card {
+  height: 100%;
+  text-align: center;
+
+  p {
+    margin-bottom: 0;
+
+    &:first-of-type {
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.size-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15.9375rem;
+  padding: 1rem;
+  border-radius: 0.5625rem;
+  background-color: $color-grey-grey;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@include until($xl) {
+  .size-img {
+    height: 13.125rem;
+  }
+}
+
+@include until($lg) {
+  .size-img {
+    height: 9.375rem;
+  }
+}
+
+@include until($md) {
+  .size-card {
+    margin-bottom: 1rem;
+  }
+
+  .size-img {
+    height: 15rem;
+  }
+}
+
+@include until($sm) {
+  .size-cards {
+    .col-6 {
+      &:nth-child(2n-1) {
+        padding-right: 0.4375rem;
+        text-align: right;
+      }
+
+      &:nth-child(2n) {
+        padding-left: 0.4375rem;
+        text-align: left;
+      }
+    }
+  }
+
+  .size-card {
+    display: inline-block;
+    width: 100%;
+    max-width: 9.875rem;
+  }
+
+  .size-img {
+    max-width: 9.875rem;
+    height: 9.875rem;
   }
 }

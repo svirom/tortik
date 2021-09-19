@@ -40,13 +40,16 @@
   h2 {
     margin-bottom: 1.875rem;
   }
+
+  &.page-tastes {
+    padding-bottom: 0;
+  }
 }
 
 .landing-tastes {
   padding-top: 1.4375rem;
   padding-bottom: 1.9375rem;
   text-align: center;
-  background-color: $color-grey-grey;
 
   h2 {
     margin-bottom: 2rem;
@@ -56,6 +59,15 @@
     width: 100%;
     max-width: 20.625rem;
     padding: 0.5625rem 1.5rem 0.4375rem;
+  }
+
+  &.page-tastes {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    h1 {
+      margin-bottom: 1.5rem;
+    }
   }
 }
 
@@ -81,6 +93,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+.landing-size {
+  padding-top: 1.5rem;
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.landing-content {
+  padding-top: 4rem;
+
+  h1, h2, h3 {
+    margin-bottom: 1rem;
   }
 }
 
@@ -185,6 +213,10 @@
         margin-top: 0;
       }
     }
+  }
+
+  .landing-content {
+    padding-top: 2rem;
   }
 }
 
