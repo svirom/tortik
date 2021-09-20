@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the breadcrumb of the site/application.
+// -----------------------------------------------------------------------------
+
+.breadcrumb-wrapper {
+  .breadcrumb {
+    margin-bottom: 0;
+    padding: 1rem 0 0.75rem;
+    background-color: transparent;
+  }
+
+  .breadcrumb-item {
+    &.active {
+      color: $color-pink;
+    }
+
+    & + .breadcrumb-item {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .breadcrumb-item:not(.active) {
+    margin-bottom: 0.25rem;
+    padding-right: 0.375rem;
+
+    &::after {
+      float: right;
+      content: '\2022';
+      padding-left: 0.375rem;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: $color-pink;
+    }
+  }
+}

@@ -1141,6 +1141,38 @@ ul.ul-content li {
   }
 }
 
+.breadcrumb-wrapper .breadcrumb {
+  margin-bottom: 0;
+  padding: 1rem 0 0.75rem;
+  background-color: transparent;
+}
+
+.breadcrumb-wrapper .breadcrumb-item.active {
+  color: #FFA6BB;
+}
+
+.breadcrumb-wrapper .breadcrumb-item + .breadcrumb-item {
+  padding-left: 0;
+}
+
+.breadcrumb-wrapper .breadcrumb-item + .breadcrumb-item::before {
+  display: none;
+}
+
+.breadcrumb-wrapper .breadcrumb-item:not(.active) {
+  margin-bottom: 0.25rem;
+  padding-right: 0.375rem;
+}
+
+.breadcrumb-wrapper .breadcrumb-item:not(.active)::after {
+  float: right;
+  content: '\2022';
+  padding-left: 0.375rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #FFA6BB;
+}
+
 .main-footer {
   padding: 2rem 0 5.375rem;
   color: #F3F5FA;
@@ -1361,12 +1393,27 @@ ul.ul-content li {
 }
 
 .landing-tastes.page-tastes {
-  padding-top: 1rem;
+  padding-top: 0;
   padding-bottom: 1rem;
 }
 
 .landing-tastes.page-tastes h1 {
   margin-bottom: 1.5rem;
+}
+
+.landing-tastes.landing-cupcake {
+  padding-top: 1.125rem;
+  padding-bottom: 0.9375rem;
+}
+
+.landing-tastes.landing-cupcake .taste-card {
+  padding-bottom: 1.5rem;
+  text-align: left;
+}
+
+.landing-tastes.landing-cupcake .taste-content .taste-title {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .landing-order {
@@ -1479,11 +1526,17 @@ ul.ul-content li {
     padding-top: 1.875rem;
     padding-bottom: 0.9375rem;
   }
+  .landing-tastes.page-tastes {
+    padding-bottom: 0;
+  }
   .landing-tastes h2 {
     margin-bottom: 1.5rem;
   }
   .landing-order {
     padding-top: 2rem;
+  }
+  .landing-order.page-tastes {
+    padding-top: 1rem;
   }
   .landing-card {
     padding-bottom: 2rem;
@@ -1500,6 +1553,9 @@ ul.ul-content li {
   .landing-card .delivery-option.delivery-option-last {
     margin-top: 0;
   }
+  .landing-size {
+    padding-top: 0.5rem;
+  }
   .landing-content {
     padding-top: 2rem;
   }
@@ -1511,6 +1567,14 @@ ul.ul-content li {
   }
   .landing-card .delivery-option.delivery-option-last {
     margin-top: 1.25rem;
+  }
+  .landing-tastes.page-tastes {
+    padding-bottom: 1.5rem;
+  }
+  .landing-tastes.landing-cupcake .taste-card {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 /*# sourceMappingURL=main.css.map */

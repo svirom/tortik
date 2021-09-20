@@ -62,11 +62,26 @@
   }
 
   &.page-tastes {
-    padding-top: 1rem;
+    padding-top: 0;
     padding-bottom: 1rem;
 
     h1 {
       margin-bottom: 1.5rem;
+    }
+  }
+
+  &.landing-cupcake {
+    padding-top: 1.125rem;
+    padding-bottom: 0.9375rem;
+
+    .taste-card {
+      padding-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .taste-content .taste-title {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
     }
   }
 }
@@ -98,6 +113,7 @@
 
 .landing-size {
   padding-top: 1.5rem;
+
   h2 {
     margin-bottom: 1rem;
     text-align: center;
@@ -186,6 +202,10 @@
     padding-top: 1.875rem;
     padding-bottom: 0.9375rem;
 
+    &.page-tastes {
+      padding-bottom: 0;
+    }
+
     h2 {
       margin-bottom: 1.5rem;
     }
@@ -193,6 +213,10 @@
 
   .landing-order {
     padding-top: 2rem;
+
+    &.page-tastes {
+      padding-top: 1rem;
+    }
   }
 
   .landing-card {
@@ -215,6 +239,10 @@
     }
   }
 
+  .landing-size {
+    padding-top: 0.5rem;
+  }
+
   .landing-content {
     padding-top: 2rem;
   }
@@ -227,6 +255,18 @@
       
       &.delivery-option-last {
         margin-top: 1.25rem;
+      }
+    }
+  }
+
+  .landing-tastes {
+    &.page-tastes {
+      padding-bottom: 1.5rem;
+    }
+
+    &.landing-cupcake {
+      .taste-card {
+        justify-content: flex-start;
       }
     }
   }
