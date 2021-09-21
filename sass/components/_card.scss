@@ -17,6 +17,12 @@
     margin-top: 1.4375rem;
     margin-bottom: 0;
   }
+
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+  }
 }
 
 @include until($md) {
@@ -232,10 +238,6 @@
     &.taste-page-card-last {
       padding-bottom: 0;  
     }
-  }
-
-  .taste-page-img {
-    
   }
 }
 

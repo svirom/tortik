@@ -180,6 +180,18 @@ ul.ul-content li {
           box-shadow: 0 0 0 0.2rem rgba(255, 166, 187, 0.25);
 }
 
+.btn.btn-loadmore {
+  padding-left: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 7.5H19C20.1 7.5 21 6.6 21 5.5V2.5' stroke='black' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 12C22 17.25 17.75 21.5 12.5 21.5C7.25 21.5 3 17.25 3 12C3 6.75 7.25 2.5 12.5 2.5C15.85 2.5 18.79 4.22997 20.48 6.83997' stroke='black' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.btn.btn-loadmore:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .catalog-card {
   display: block;
   margin-bottom: 1.875rem;
@@ -194,6 +206,12 @@ ul.ul-content li {
 .catalog-card h3 {
   margin-top: 1.4375rem;
   margin-bottom: 0;
+}
+
+.catalog-card p {
+  font-size: 1.125rem;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -611,6 +629,7 @@ ul.ul-content li {
           flex: 0 0 5rem;
   height: 5rem;
   padding: 1.125rem;
+  border-radius: 0.5rem;
 }
 
 .request-card-2 .request-link img {
@@ -1173,6 +1192,71 @@ ul.ul-content li {
   color: #FFA6BB;
 }
 
+.aside {
+  padding-top: 4.5rem;
+}
+
+.aside .aside-title {
+  margin-left: 0.8125rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 2px solid #DCE2F0;
+}
+
+.aside .aside-menu {
+  padding-top: 0.75rem;
+  padding-bottom: 1.25rem;
+}
+
+.aside .aside-menu a {
+  display: block;
+  padding: 0.75rem 0.8125rem;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.aside .aside-menu a:hover {
+  color: #000000;
+  background-color: #FFA6BB;
+}
+
+.aside .aside-menu a.active {
+  background-color: #FFA6BB;
+}
+
+.aside .request-card.request-card-2 {
+  padding: 1rem;
+  text-align: left;
+}
+
+.aside .request-card.request-card-2 .request-contacts {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.aside .request-card.request-card-2 .request-divider span {
+  padding: 0;
+}
+
+.aside .request-card.request-card-2 .request-email form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aside .request-card.request-card-2 .request-email form .form-group {
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+.aside .request-card.request-card-2 .request-email form .btn-submit {
+  max-width: 100%;
+}
+
 .main-footer {
   padding: 2rem 0 5.375rem;
   color: #F3F5FA;
@@ -1576,5 +1660,39 @@ ul.ul-content li {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+}
+
+.catalog {
+  text-align: center;
+}
+
+.catalog .h1 {
+  display: inline-block;
+  margin-bottom: 2.125rem;
+}
+
+.catalog .catalog-card {
+  text-align: left;
+}
+
+.viewed {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.viewed h2 {
+  margin-bottom: 1.875rem;
+}
+
+.viewed .catalog-card {
+  text-align: left;
+}
+
+.viewed .catalog-card p {
+  font-size: 1rem;
+}
+
+.category-content.landing-content {
+  padding-top: 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */

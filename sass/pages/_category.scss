@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the category page of the site.
+// -----------------------------------------------------------------------------
+
+.catalog {
+  text-align: center;
+
+  .h1 {
+    display: inline-block;
+    margin-bottom: 2.125rem;
+  }
+
+  .catalog-card {
+    text-align: left;
+  }
+}
+
+.viewed {
+  padding-top: 2rem;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1.875rem;
+  }
+
+  .catalog-card {
+    text-align: left;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.category-content {
+  &.landing-content {
+    padding-top: 0.5rem;
+  }
+}

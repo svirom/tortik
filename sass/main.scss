@@ -15,13 +15,16 @@
 @import 'components/form';
 @import 'components/card';
 @import 'components/request-card';
+@import 'components/slider';
 
 // 5. Layout-related sections
 @import 'layouts/main-content';
 @import 'layouts/header';
 @import 'layouts/breadcrumb';
+@import 'layouts/aside';
 @import 'layouts/footer';
 
 // 6. Pages
 @import 'pages/homepage';
 @import 'pages/landing';
+@import 'pages/category';

@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the aside of the site/application.
+// -----------------------------------------------------------------------------
+
+.aside {
+  padding-top: 4.5rem;
+
+  .aside-title {
+    margin-left: 0.8125rem;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    border-bottom: 2px solid $color-grey;
+  }
+
+  .aside-menu {
+    padding-top: 0.75rem;
+    padding-bottom: 1.25rem;
+
+    a {
+      display: block;
+      padding: 0.75rem 0.8125rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $color-black;
+        background-color: $color-pink;
+      }
+
+      &.active {
+        background-color: $color-pink;
+      }
+    }
+  }
+
+  .request-card.request-card-2 {
+    padding: 1rem;
+    text-align: left;
+
+    .request-contacts {
+      justify-content: flex-start;
+    }
+
+    .request-divider span {
+      padding: 0;
+    }
+
+    .request-email form {
+      flex-direction: column;
+
+      .form-group {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+
+      .btn-submit {
+        max-width: 100%;
+      }
+    }
+  }
+}
