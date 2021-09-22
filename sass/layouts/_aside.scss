@@ -20,7 +20,11 @@
     a {
       display: block;
       padding: 0.75rem 0.8125rem;
+      padding-right: 0.25rem;
       border-radius: 0.5rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
       transition: all 0.3s ease;
 
       &:hover {

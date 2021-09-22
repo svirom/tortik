@@ -15,25 +15,33 @@
   }
 }
 
-.viewed {
+.category-request {
+  padding-top: 1.5rem;
+}
+
+.slider-viewed {
   padding-top: 2rem;
   text-align: center;
 
   h2 {
     margin-bottom: 1.875rem;
   }
-
-  .catalog-card {
-    text-align: left;
-
-    p {
-      font-size: 1rem;
-    }
-  }
 }
 
 .category-content {
   &.landing-content {
-    padding-top: 0.5rem;
+    padding-top: 2rem;
+  }
+}
+
+@include until($md) {
+  .catalog .h1 {
+    margin-bottom: 2rem;
+  }
+
+  .slider-viewed {
+    h2 {
+      margin-bottom: 1.5rem;
+    }
   }
 }

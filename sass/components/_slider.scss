@@ -2,4 +2,95 @@
 // This file contains all styles related to the slider component.
 // -----------------------------------------------------------------------------
 
+.slider-card {
+  display: block;
 
+  img {
+    max-width: 100%;
+    border-radius: 0.25rem;
+  }
+
+  p {
+    margin-top: 0.875rem;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.slider-wrapper {
+  .lSAction {
+    & > a {
+      position: absolute;
+      top: 64px;
+      width: 16px;
+      height: 32px;
+      margin-top: 0;
+      opacity: 1;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &:active {
+        top: 65px;
+      }
+
+      &.lSPrev {
+        left: 2px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='32' viewBox='0 0 15 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 30L2 15.4717L13 2' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+      }
+  
+      &.lSNext {
+        right: 2px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='32' viewBox='0 0 15 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L13 16.5283L2 30' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+      }
+    }
+  }
+}
+
+
+@include until($xl) {
+  .slider-wrapper {
+    .lSAction {
+      & > a {
+        &.lSPrev, &.lSNext {
+          top: 50px;
+        }
+      }
+    }
+  }
+}
+
+@include until($lg) {
+  .slider-wrapper {
+    .lSAction {
+      & > a {
+        &.lSPrev, &.lSNext {
+          top: 90px;
+        }
+      }
+    }
+  }
+}
+
+@include until($md) {
+  .slider-wrapper {
+    .lSAction {
+      & > a {
+        &.lSPrev, &.lSNext {
+          top: 110px;
+        }
+      }
+    }
+  }
+}
+
+@include until($sm) {
+  .slider-wrapper {
+    .lSAction {
+      & > a {
+        &.lSPrev, &.lSNext {
+          top: 64px;
+        }
+      }
+    }
+  }
+}

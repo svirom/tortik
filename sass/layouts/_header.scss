@@ -64,6 +64,8 @@
     }
 
     &:hover, &[aria-expanded="true"] {
+      color: $color-pink;
+      
       svg {
         stroke: $color-pink;
       }
