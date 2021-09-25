@@ -18,20 +18,10 @@
   }
 }
 
-.form-input::-webkit-input-placeholder {
-  color: $color-dark-grey;
-}
-
-.form-input:-ms-input-placeholder {
-  color: $color-dark-grey;
-}
-
-.form-input::-ms-input-placeholder {
-  color: $color-dark-grey;
-}
-
-.form-input::placeholder {
-  color: $color-dark-grey;
+.form-input {
+  @include placeholder {
+    color: $color-dark-grey;
+  }
 }
 
 .btn {

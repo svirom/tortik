@@ -2,3 +2,38 @@
 // This file contains all styles related to the single page of the site.
 // -----------------------------------------------------------------------------
 
+.page-header {
+  padding-bottom: 0.8125rem;
+
+  h1 {
+    margin-bottom: 1.625rem;
+  }
+}
+
+.page-slider {
+  &.slider-viewed {
+    padding-top: 4rem;
+  }
+}
+
+@include until($md) {
+  .page-header {
+    padding-bottom: 0;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .page-slider {
+    &.slider-viewed {
+      padding-top: 2rem;
+    }
+  }
+
+  .cupcake-slider {
+    &.slider-viewed {
+      padding-top: 0;
+    }
+  }
+}

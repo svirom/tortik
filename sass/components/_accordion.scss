@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the accordion component.
+// -----------------------------------------------------------------------------
+
+.accordion {
+  margin-top: 1.375rem;
+}
+
+.accordion-card {
+  border-bottom: 1px solid $color-grey;
+
+  &:first-of-type {
+    border-top: 1px solid $color-grey;
+  }
+}
+
+.accordion-card-title {
+  a {
+    display: block;
+    position: relative;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+    padding-left: 2rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    background: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0.5V17.5' stroke='%23FFA6BB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.5 9H0.5' stroke='%23FFA6BB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") left 0.25rem top 1.1875rem no-repeat;
+
+    &:hover {
+      color: $color-pink;
+    }
+
+    &[aria-expanded="true"] {
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 9H0.5' stroke='%23FFA6BB' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+.accordion-card-content {
+  padding-bottom: 1rem;
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -40,34 +40,28 @@ $(document).ready(function() {
       .find('.mobile-catalog').removeClass('active');
   }
 
-  // slider
-  var slider = $('#content-slider').lightSlider({
-    item: 6,
-    loop: true,
-    slideMove: 1,
-    slideMargin: 30,
-    easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-    speed: 600,
-    // controls: false,
-		pager: false,
-    responsive : [
-      {
-        breakpoint: 991,
-        settings: {
-          item: 3,
-          // slideMove: 1,
-          slideMargin: 30,
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          item: 2,
-          slideMargin: 14,
-          // slideMove: 1
-        }
-      }
-    ]
+  // back to top
+  $('#back-to-top').on('click.smoothscroll', function(e) {
+    e.preventDefault();
+    $('html, body').stop().animate({
+      'scrollTop': 0,
+    }, 600);
+  })
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 400) {
+      $('#back-to-top').addClass('visible');
+    } else {
+      $('#back-to-top').removeClass('visible');
+    }
   });
+
+  // item gallery
+  $('.item-gallery-thumb a').on('click', function(e) {
+    e.preventDefault();
+    var currImg = $(this).find('img').attr('src');
+
+    $('.item-gallery-main').find('img').css('display', 'none').attr('src', currImg).fadeIn(400);
+  }) 
 
 })

@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the back-to-top component.
+// -----------------------------------------------------------------------------
+
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.3125rem;
+  background-color: $color-pink;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 21L16 8L29 21' stroke='%23000000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+
+  &.visible {
+    visibility: visible;
+    opacity: 0.75;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@include until($sm) {
+  #back-to-top {
+    bottom: 1rem;
+    left: 1rem;
+  }
+}

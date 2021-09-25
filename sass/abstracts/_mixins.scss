@@ -15,13 +15,6 @@
   }
 };
 
-// font
-@mixin font($size: 1rem, $weight: 400, $lineHeight: 1.4) {
-	font-size: $size;
-	font-weight: $weight;
-	line-height: $lineHeight;
-}
-
 // input placeholder
 @mixin placeholder {
   &::-webkit-input-placeholder {
