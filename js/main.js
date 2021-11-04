@@ -62,6 +62,18 @@ $(document).ready(function() {
     var currImg = $(this).find('img').attr('src');
 
     $('.item-gallery-main').find('img').css('display', 'none').attr('src', currImg).fadeIn(400);
-  }) 
+  })
+
+  // open submenu on load (if submenu page)
+  var activeSubpages = $('.aside-submenu').find('.active');
+
+  if (activeSubpages && (activeSubpages.length > 0)) {
+    $(activeSubpages).each(function() {
+      // $(this).closest('.collapse').collapse('show');
+
+      $(this).closest('.collapse').addClass('show')
+        .prev('.has-submenu').attr('aria-expanded', true);
+    })
+  }
 
 })

@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pagination component.
+// -----------------------------------------------------------------------------
+
+.pagination-wrapper {
+  .pagination {
+    justify-content: center;
+
+    .page-item {
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+
+      .page-link {
+        width: 3rem;
+        height: 3rem;
+        margin-left: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0.25rem;
+        font-size: 1.125rem;
+        line-height: 3rem;
+        color: $color-black;
+        text-align: center;
+        background-color: $color-grey;
+      }
+
+      &:hover {
+        .page-link {
+          background-color: $color-grey-grey;
+        }
+      }
+
+      &.active {
+        .page-link {
+          background-color: $color-pink;
+        }
+      }
+    }
+  }
+
+  @include until(360px) {
+    .pagination {
+      .page-item {
+        &:not(:last-child) {
+          margin-right: 0.25rem;
+        }
+      }
+    }
+  }
+}

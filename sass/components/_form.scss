@@ -40,16 +40,4 @@
       box-shadow: 0 0 0 0.2rem rgba($color-pink, 0.25);
     }
   }
-
-  &.btn-loadmore {
-    padding-left: 2rem;
-    background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 7.5H19C20.1 7.5 21 6.6 21 5.5V2.5' stroke='black' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 12C22 17.25 17.75 21.5 12.5 21.5C7.25 21.5 3 17.25 3 12C3 6.75 7.25 2.5 12.5 2.5C15.85 2.5 18.79 4.22997 20.48 6.83997' stroke='black' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-position: left center;
-    background-repeat: no-repeat;
-
-    &:focus {
-      box-shadow: none;
-    }
-  }
 }
-
