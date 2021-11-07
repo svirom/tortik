@@ -138,8 +138,7 @@ ul.ul-content li {
   background-repeat: no-repeat;
 }
 
-.form-control.form-input {
-  height: 3rem;
+.form-control.form-input, .form-control.form-textarea {
   padding: 0.5rem 1.5rem;
   color: #000000;
   border: 2px solid #DCE2F0;
@@ -148,32 +147,39 @@ ul.ul-content li {
   text-overflow: ellipsis;
 }
 
-.form-control.form-input:focus {
+.form-control.form-input:focus, .form-control.form-textarea:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 226, 240, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(220, 226, 240, 0.25);
 }
 
-.form-input::-webkit-input-placeholder {
+.form-control.form-input {
+  height: 3rem;
+}
+
+.form-input::-webkit-input-placeholder, .form-textarea::-webkit-input-placeholder {
   color: #8792AB;
 }
 
-.form-input:-ms-input-placeholder {
+.form-input:-ms-input-placeholder, .form-textarea:-ms-input-placeholder {
   color: #8792AB;
 }
 
-.form-input::-ms-input-placeholder {
+.form-input::-ms-input-placeholder, .form-textarea::-ms-input-placeholder {
   color: #8792AB;
 }
 
-.form-input::placeholder {
+.form-input::placeholder, .form-textarea::placeholder {
   color: #8792AB;
 }
 
-.btn.btn-submit {
+.btn.btn-submit, .btn.btn-upload {
   height: 3rem;
   padding: 0.5rem 1.5rem;
   color: #000000;
   font-size: 1.125rem;
+}
+
+.btn.btn-submit {
   background-color: #FFA6BB;
 }
 
@@ -184,6 +190,10 @@ ul.ul-content li {
 .btn.btn-submit:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 166, 187, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(255, 166, 187, 0.25);
+}
+
+.btn.btn-upload {
+  background-color: #DCE2F0;
 }
 
 .catalog-card {
@@ -894,6 +904,111 @@ ul.ul-content li {
 
 .rating-input input:checked ~ label {
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0.0410156L12.9389 5.99593L19.5106 6.95085L14.7553 11.5861L15.8779 18.1312L10 15.041L4.12215 18.1312L5.24472 11.5861L0.489435 6.95085L7.06107 5.99593L10 0.0410156Z' fill='%23FBE7C6'/%3E%3C/svg%3E");
+}
+
+.reviews h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.reviews .pagination-wrapper {
+  padding-top: 2rem;
+}
+
+.review {
+  margin-bottom: 2rem;
+}
+
+.review .review-meta {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #DCE2F0;
+}
+
+.review .review-meta time {
+  padding-left: 1rem;
+  color: #8792AB;
+}
+
+.review .rating-input {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.review .review-img {
+  font-size: 0;
+}
+
+.review .review-img img {
+  max-width: 88px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.reviews-form-wrapper {
+  margin-bottom: 1rem;
+}
+
+.reviews-form-wrapper .btn[aria-expanded="true"] {
+  display: none;
+}
+
+.reviews-form h3, .reviews-form .h3-mobile {
+  margin-bottom: 0.75rem;
+}
+
+.reviews-form input[type="file"] {
+  display: none;
+}
+
+.reviews-form .form-group {
+  margin-bottom: 0.625rem;
+}
+
+.reviews-form label {
+  margin-bottom: 0.25rem;
+}
+
+.reviews-form .rating-input {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.reviews-form .reviews-file {
+  margin-top: 0.875rem;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #DCE2F0;
+  border-radius: 0.5rem;
+}
+
+.reviews-form .reviews-file p {
+  margin-bottom: 0.5rem;
+}
+
+.reviews-form .reviews-file p.reviews-file-last {
+  color: #8792AB;
+}
+
+.reviews-form .reviews-file .form-group {
+  margin-bottom: 0;
+}
+
+.reviews-form .reviews-file .btn-upload {
+  max-width: 255px;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .reviews .pagination-wrapper {
+    padding-top: 0;
+  }
+  .reviews-form .reviews-file .btn-upload {
+    max-width: none;
+  }
 }
 
 #back-to-top {
@@ -1944,6 +2059,10 @@ ul.ul-content li {
   margin-bottom: 1rem;
 }
 
+.landing-reviews {
+  padding-top: 4rem;
+}
+
 @media screen and (max-width: 1199px) {
   .landing-card .request-contacts {
     -webkit-box-orient: vertical;
@@ -2036,6 +2155,9 @@ ul.ul-content li {
     padding-top: 0.5rem;
   }
   .landing-content {
+    padding-top: 2rem;
+  }
+  .landing-reviews {
     padding-top: 2rem;
   }
 }

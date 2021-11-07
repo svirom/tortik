@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the reviews of the site.
+// -----------------------------------------------------------------------------
+
+.reviews {
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .pagination-wrapper {
+    padding-top: 2rem;
+  }
+}
+
+.review {
+  margin-bottom: 2rem;
+
+  .review-meta {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $color-grey;
+
+    time {
+      padding-left: 1rem;
+      color: $color-dark-grey;
+    }
+  }
+
+  .rating-input {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .review-img {
+    font-size: 0;
+
+    img {
+      max-width: 88px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.reviews-form-wrapper {
+  margin-bottom: 1rem;
+
+  .btn {
+    &[aria-expanded="true"] {
+      display: none;
+    }
+  }
+}
+
+.reviews-form {
+  h3, .h3-mobile {
+    margin-bottom: 0.75rem;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .form-group {
+    margin-bottom: 0.625rem;
+  }
+
+  label {
+    margin-bottom: 0.25rem;
+  }
+
+  .rating-input {
+    justify-content: flex-end;
+  }
+
+  .reviews-file {
+    margin-top: 0.875rem;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    border: 1px solid $color-grey;
+    border-radius: 0.5rem;
+
+    p {
+      margin-bottom: 0.5rem;
+
+      &.reviews-file-last {
+        color: $color-dark-grey;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    .btn-upload {
+      max-width: 255px;
+      width: 100%;
+    }
+  }
+}
+
+@include until($md) {
+  .reviews {
+    .pagination-wrapper {
+      padding-top: 0;
+    }
+  }
+
+  .reviews-form {
+    .reviews-file {
+      .btn-upload {
+        max-width: none;
+      }
+    }
+  }
+}

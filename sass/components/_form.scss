@@ -3,8 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .form-control {
-  &.form-input {
-    height: 3rem;
+  &.form-input, &.form-textarea {
     padding: 0.5rem 1.5rem;
     color: $color-black;
     border: 2px solid $color-grey;
@@ -16,20 +15,27 @@
       box-shadow: 0 0 0 0.2rem rgba($color-grey, 0.25);
     }
   }
+
+  &.form-input {
+    height: 3rem;
+  }
 }
 
-.form-input {
+.form-input, .form-textarea {
   @include placeholder {
     color: $color-dark-grey;
   }
 }
 
 .btn {
-  &.btn-submit {
+  &.btn-submit, &.btn-upload {
     height: 3rem;
     padding: 0.5rem 1.5rem;
     color: $color-black;
     font-size: 1.125rem;
+  }
+
+  &.btn-submit {
     background-color: $color-pink;
 
     &:hover {
@@ -39,5 +45,9 @@
     &:focus {
       box-shadow: 0 0 0 0.2rem rgba($color-pink, 0.25);
     }
+  }
+
+  &.btn-upload {
+    background-color: $color-grey;
   }
 }
