@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the review page of the site.
+// -----------------------------------------------------------------------------
+
+.page-review {
+  &.reviews {
+    padding-top: 1.5rem;
+  }
+
+  .page-review-title {
+    border-bottom: 2px solid $color-grey-grey;
+  }
+
+  .reviews-form-section {
+    justify-content: center;
+
+    .page-review-main {
+      display: none;
+    }
+
+    .reviews-success {
+      margin-top: 1rem;
+
+      .reviews-form-success {
+        margin-bottom: 0.75rem;
+        text-align: center;
+
+        p {
+          font-size: 1.125rem;
+        }
+      }
+
+      .page-review-main {
+        display: block;
+      }
+    }
+  }
+
+  .select-dropdown-wrapper {
+    max-width: 21.875rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    & > a {
+      & > span {
+        color: $color-dark-grey;
+
+        &.active {
+          color: $color-black;
+        }
+      }
+    }
+  }
+}

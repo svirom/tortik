@@ -76,4 +76,50 @@ $(document).ready(function() {
     })
   }
 
+  // input field type file (upload max 5 files, filesize limit, filetypes limit)
+  var fileUpload = document.getElementById('file-upload');
+  var fileList = [];
+  var html = '';
+
+  $('#file-upload').on('change', function() {
+    fileList = [];
+    html = '';
+    $('#file-names').text(html);
+
+    if (fileUpload.files.length <= 5) {
+      for (var i = 0; i < fileUpload.files.length; i++) {
+        
+        if (fileUpload.files[i].size > 5242880) {
+          html = $('#file-names').attr('data-error-size');
+          $('#file-upload').val('');
+        } else if ( (fileUpload.files[i].type != 'image/png') && (fileUpload.files[i].type != 'image/jpeg') && (fileUpload.files[i].type != 'image/gif') ) {
+          html = $('#file-names').attr('data-error-type');
+          $('#file-upload').val('');
+        } else {
+          fileList.push(fileUpload.files[i].name);
+          html = fileList.join(', ');
+        }
+      }
+            
+    } else {
+      html = $('#file-names').attr('data-error-max');
+      $('#file-upload').val('');
+    }
+
+    $('#file-names').text(html);
+
+    // console.log($('#file-upload').val());
+    // console.log(fileUpload.files);
+  })
+
+  // select dropdown
+  $('.select-dropdown-wrapper .dropdown-menu a').on('click', function(e) {
+    e.preventDefault();
+    var selectCity = $(this).text();
+
+    $('#review-select-city').addClass('active').text(selectCity);
+    $('#review-select-input input').val(selectCity);
+
+  })
+
 })

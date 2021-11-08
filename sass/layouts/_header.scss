@@ -308,34 +308,6 @@
   }
 }
 
-.select-menu-mobile {
-  text-align: left;
-
-  & > a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 3rem;
-    padding: 0.875rem 1rem 0.875rem 1.5rem;
-    line-height: 1;
-    border: 2px solid $color-grey;
-    border-radius: 0.25rem;
-
-    &[aria-expanded="true"], &:hover {
-      color: $color-black;
-    }
-
-    & > svg {
-      stroke: $color-dark-grey;
-    }
-  }
-
-  .dropdown-menu.dropdown-select {
-    width: 100%;
-    margin-top: 0.4375rem;
-  }
-}
-
 .main-mobile-nav {
   padding-top: 1.875rem;
 }

@@ -3,9 +3,10 @@
 // -----------------------------------------------------------------------------
 
 .reviews {
+  padding-top: 4rem;
+
   h2 {
     margin-bottom: 1rem;
-    text-align: center;
   }
 
   .pagination-wrapper {
@@ -51,6 +52,28 @@
   .btn {
     &[aria-expanded="true"] {
       display: none;
+    }
+  }
+
+  .reviews-form-success {
+    display: none;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: $color-grey-grey;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &.reviews-success {
+    a[data-toggle="collapse"], .reviews-form {
+      display: none;
+    }
+
+    .reviews-form-success {
+      display: block;
     }
   }
 }
@@ -104,6 +127,8 @@
 
 @include until($md) {
   .reviews {
+    padding-top: 2rem;
+
     .pagination-wrapper {
       padding-top: 0;
     }
