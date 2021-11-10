@@ -1,0 +1,207 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the invoice page of the site.
+// -----------------------------------------------------------------------------
+
+.invoice {
+  padding-top: 1.5rem;
+
+  .invoice-border {
+    border-bottom: 2px solid $color-grey-grey;
+  }
+
+  .invoice-border-dashed {
+    border-bottom: 2px dashed $color-grey-grey;
+  }
+}
+
+.invoice-card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid $color-grey;
+  border-radius: 0.5rem;
+
+  .invoice-card-title {
+    padding-bottom: 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $color-pink;
+  }
+
+  .invoice-widget {
+    margin-bottom: 1rem;
+
+    &.invoice-border-dashed {
+      border-bottom-width: 0;
+    }
+
+    p:not(.invoice-widget-title) {
+      margin-bottom: 0;
+    }
+
+    .invoice-widget-title {
+      margin-bottom: 0.5rem;
+      color: $color-dark-grey;
+    }
+
+    .invoice-widget-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: $color-pink;
+      text-decoration: underline;
+    }
+  }
+}
+
+.invoice-gallery {
+  position: relative;
+  max-width: 300px;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+
+  .invoice-slider-pagination {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: 65px;
+    padding: 6px 5px 5px;
+    color: $color-white;
+    text-align: center;
+    border-radius: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    span {
+      color: $color-white;
+    }
+  }
+
+  .slider-wrapper {
+    .lSAction > a {
+      top: 50%;
+      transform: translateY(-50%);
+
+      &.lSPrev {
+        left: 8px;
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='30' viewBox='0 0 17 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 28L2 15L15 2' stroke='%23FFF8F8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+
+      &.lSNext {
+        right: 8px;
+        background-image: url("data:image/svg+xml,%3Csvg width='17' height='30' viewBox='0 0 17 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L15 15L2 28' stroke='%23FFF8F8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+    }
+  }
+}
+
+.invoice-modal {
+  &.modal {
+    text-align: center;
+
+    .close {
+      position: absolute;
+      right: 1rem;
+      top: 0.25rem;
+      z-index: 100;
+    }
+  }
+
+  .modal-dialog {
+    display: inline-block;
+    max-width: none;
+  }
+
+  .modal-body {
+    padding-top: 2rem;
+
+    img {
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+}
+
+.invoice-table-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.invoice-requisites {
+  text-align: center;
+}
+
+.invoice-requisites-card {
+  margin-bottom: 1rem;
+  padding: 0.625rem;
+  text-align: center;
+  border-radius: 0.5rem; 
+  background-color: $color-grey-grey;
+
+  span {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+.invoice-requisites-social {
+  display: flex;
+  justify-content: center;
+
+  & > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child {
+      margin-right: 2.5rem;
+    }
+  }
+
+  .request-link {
+    flex-basis: 4rem;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+
+    img {
+      margin-right: 0;
+    }
+
+    &.request-viber {
+      margin-right: 0;
+
+      img {
+        width: 2.25rem;
+      }
+    }
+
+    &.request-telegram {
+      margin-left: 0;
+
+      img {
+        width: 2.375rem;
+      }
+    }
+  }
+}
+
+@include until($md) {
+  .invoice-card {
+    .invoice-widget {
+      padding-bottom: 1rem;
+      
+      &.invoice-border-dashed {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+  .invoice-requisites-card {
+    margin-bottom: 0.5rem;
+  }
+
+  .invoice-requisites-social {
+    display: none;
+  }
+}

@@ -126,14 +126,6 @@
   margin-right: 1.6875rem;
 }
 
-.social-phone {
-  margin-right: 1.25rem;
-
-  a {
-    font-weight: 500;
-  }
-}
-
 .social-item {
   &:not(:last-of-type) {
     margin-right: 0.4375rem;
@@ -389,7 +381,7 @@
 }
 
 @include until($xl) {
-  .main-nav, .select-menu {
+  .main-nav, .select-menu:not(.select-menu-phone) {
     display: none;
   }
 
@@ -399,6 +391,12 @@
 
   .mobile-nav {
     display: block;
+  }
+}
+
+@include until($md) {
+  .select-menu-phone {
+    display: none;
   }
 }
 
