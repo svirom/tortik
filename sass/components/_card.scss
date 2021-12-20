@@ -13,7 +13,7 @@
     border-radius: 0.5rem;
   }
 
-  h3 {
+  h3, .h3 {
     margin-top: 1.4375rem;
     margin-bottom: 0;
   }
@@ -29,12 +29,14 @@
   .catalog-card {
     margin-bottom: 0.9375rem;
 
-    h3 {
+    h3, .h3 {
       margin-top: 0.625rem;
+      font-size: 1.125rem;
     }
 
     p {
       font-size: 1rem;
+      text-align: center;
     }
   }
 }
@@ -86,7 +88,7 @@
 @include until($sm) {
   .taste-card {
     flex-direction: row;
-    justify-content: center;
+    // justify-content: center;
     padding-bottom: 1.5rem;
     text-align: left;
 
@@ -97,6 +99,7 @@
   }
 
   .taste-img {
+    flex-shrink: 0;
     width: 6.25rem;
     margin-right: 1rem;
     margin-bottom: 0;
@@ -109,7 +112,7 @@
   border-radius: 0.5rem;
   background-color: $color-mint;
 
-  h3 {
+  h3, .h3 {
     margin-bottom: 1rem;
   }
 
@@ -142,7 +145,7 @@
   border-radius: 0.5rem;
   background-color: $color-light-pink;
 
-  h3 {
+  h3, .h3 {
     margin-bottom: 1rem;
   }
 }
@@ -172,7 +175,7 @@
   .price-card {
     padding: 1rem;
 
-    h3 {
+    h3, .h3 {
       margin-bottom: 0.5rem;
     }
 
@@ -192,7 +195,7 @@
 
 @include until($sm) {
   .landing-delivery {
-    h3 {
+    h3, .h3 {
       margin-bottom: 1.25rem;
     }
   }
