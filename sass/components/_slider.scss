@@ -5,6 +5,10 @@
 .slider-card {
   display: block;
 
+  &-img {
+    aspect-ratio: 1/1;
+  }
+
   img {
     max-width: 100%;
     border-radius: 0.25rem;

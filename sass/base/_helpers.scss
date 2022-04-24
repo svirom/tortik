@@ -12,6 +12,10 @@ ul.ul-content {
 
   li {
     list-style: disc;
+
+    &::marker {
+      color: $color-pink;
+    }
   }
 }
 

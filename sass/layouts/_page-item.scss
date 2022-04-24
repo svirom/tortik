@@ -9,8 +9,19 @@
   }
 }
 
+.item-gallery-main {
+  aspect-ratio: 1/1;
+}
+
 .item-gallery-loop {
   margin-top: 1.875rem;
+}
+
+.item-gallery-thumb {
+  a {
+    display: block;
+    aspect-ratio: 1/1;
+  }
 }
 
 .item-description {
